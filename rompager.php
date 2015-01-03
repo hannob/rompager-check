@@ -125,7 +125,8 @@ which is almost certainly not helpful at all.</p>
 }
 
 if (!$console) {
-?><p class="sign">This tool is provided by <a href="https://hboeck.de/">Hanno Böck</a></p>
+?><p class="sign">This tool is provided by <a href="https://hboeck.de/">Hanno Böck</a>,
+<a href="https://github.com/hannob/rompager-check">code available on github</a></p>
 </body>
 <?php
 }
