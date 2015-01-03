@@ -1,0 +1,15 @@
+.high {
+	color:red;
+}
+
+.medium {
+	color:darkorange;
+}
+
+.ok {
+	color:darkgreen;
+}
+
+.sign {
+	text-align:right;
+}
