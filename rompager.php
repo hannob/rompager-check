@@ -51,6 +51,9 @@ function checkHost($ip, $port) {
 		goto end;
 	}
 
+	file_put_contents("../rompager.log", $ip." ".$port." ".$m[0]."\n", FILE_APPEND);
+
+
 	$rp_ver = $m[1];
 
 	output("RomPager version ".$rp_ver." found.\n");
@@ -115,6 +118,10 @@ which is almost certainly not helpful at all.</p>
 	} else {
 		$ip = $_GET['ip'];
 	}
+
+	if ((filter_var($ip, FILTER_VALIDATE_DOMAIN, FILTER_FLAG_HOSTNAME) === false)
+	    && (filter_var($ip, FILTER_VALIDATE_IP) === false))
+		die("bad hostname");
 
 	output("<h4>Port 80</h4>\n");
 	checkHost($ip, 80);
